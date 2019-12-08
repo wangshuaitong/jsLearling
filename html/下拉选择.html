@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			var oBth = document.getElementById('btn');
+			var oul = document.getElementById('uli');
+			function bclick(){
+				if (oul.style.display = 'block') {
+					oul.style.display = 'none';
+				}else{
+					oul.style.display = 'block';
+				}
+			}
+		
+	</script>
+	</head>
+	<body>
+		<div id="box">
+			<input type="button" id= "btn" onclick="bclick()" value="点击">
+			<ul id="uli" style="display: block;">
+				<li><a href="#">手写</a></li>
+				<li><a href="#">拼音</a></li>
+				<li><a href="#">关闭</a></li>
+			</ul>
+		</div>
+		
+	</body>
+</html>
