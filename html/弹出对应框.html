@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>显示</title>
+    <!-- <style type="text/css">
+        * { padding: 0; margin: 0; }
+        li { list-style: none; }
+        img { border: none; }
+        body { margin-top: 50px; font-size: 12px; background: #f0fcff; }
+
+        #tab { width: 490px; margin: 0 auto; position: relative; background: url(images/tab_bg.gif) repeat-y -490px 0; }
+        #tab .adorn1 { position: absolute; top: 0; left: 0; width: 490px; height: 6px; overflow: hidden; background: url(images/tab_bg.gif) no-repeat; z-index: 1; }
+        #tab .adorn2 { width: 490px; height: 6px; overflow: hidden; background: url(images/tab_bg.gif) no-repeat -980px 0; z-index: 1; }
+
+        #tab .nav { position: relative; z-index: 2; }
+        #tab .nav ul { width: 484px; height: 44px; border-left: 1px solid #d4d4d4; background: url(images/nav_bg.gif) repeat-x 0 -44px; }
+        #tab .nav li { float: left; height: 44px; line-height: 44px; font-family: arial;border-right: 1px solid #d4d4d4; }
+        #tab .nav li a { float: left; height: 44px; text-decoration: none; color: #999; padding: 0 20px; }
+        #tab .nav li a:hover { background: url(images/nav_bg.gif) repeat-x 0 0; }
+        #tab .nav .active { background: url(images/nav_bg.gif) repeat-x 0 -88px; }
+        #tab .nav .active a { background: url(images/ico.gif) no-repeat center bottom; color: #333; font-weight: bold; }
+        #tab .nav .active a:hover { background: url(images/ico.gif) no-repeat center bottom; }
+
+        #tab .more { font-family: "宋体"; position: absolute; top: 16px; right: 20px; color: #999; text-decoration: none; }
+        #tab .more:hover { text-decoration: underline; font-weight: bold; right: 18px; }
+
+        #tab .content { position: relative; z-index: 2; width: 484px; overflow: hidden; margin-left: 1px; }
+        #tab .box { width: 444px; padding: 20px; overflow: hidden; display: none; }
+        #tab .pic { padding: 7px 0 0 7px; width: 189px; height: 115px; background: url(images/pic_bg.jpg) no-repeat; float: left; }
+        #tab .pic_list { float: right; width: 232px; padding-left: 16px; display: inline-block; }
+        #tab .pic_list li { width: 232px; float: left; font-family: arial; line-height: 18px; margin-bottom: 4px; }
+        #tab .pic_list h2 { width: 232px; font-size: 12px; height: 18px; background: url(images/line.gif) repeat-x 0 8px; }
+        #tab .pic_list h2 a { height: 18px; text-decoration: none; color: #333; font-weight: bold; background: #fff; padding-right: 5px; float: left; }
+        #tab .pic_list h2 a:hover { text-decoration: underline; color:#D31A05; }
+        #tab .pic_list h2 span { height: 18px; color: #999; float: right; background: #fff; padding-left: 5px; }
+        #tab .pic_list p { color: #999; word-spacing: 10px; }
+
+    </style> -->
+    <style type="text/css">
+        input {
+            background:white;
+            
+        }
+        .active {
+            background: yellow;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            let aBth = document.getElementsByTagName("input");
+            let aDiv = document.getElementsByTagName("div");
+            for(let i = 0;i < aBth.length; i++){
+                debugger;
+                aBth[i].index = i;
+                aBth[i].onclick = function(){
+
+                    for(i = 0; i < aBth.length; i++){
+                        aBth[i].className = "";
+                        aDiv[i].style.display = "none";
+                    }
+                    debugger;
+                    // alert(this.index);
+                    aDiv[this.index].style.display = 'block';
+                    this.className = "active";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- <div id="tab">
+        <div class = "nav">
+            <ul>
+                <li class = "active">
+                    <a href="#">妙味课堂</a>
+                </li>
+                <li >
+                    <a href="#">妙味课堂</a>
+                </li>
+                <li >
+                    <a href="#">精通java</a>
+                </li>
+                <li >
+                    <a class="more" href="#">更多</a>
+                </li>
+            </ul>
+        </div> -->
+        <input class="active" type="button" value="1" />
+        <input type="button" value="2" />
+        <input type="button" value="3" />
+        <div style="display: block;">111</div>
+        <div style="display: none;">222</div>
+        <div style="display: none;">333</div>
+    </div>
+</body>
+</html>
