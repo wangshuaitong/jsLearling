@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>学习</title>
+        <script src="../js/jquery-3.4.1.min.js"></script>
+        <script>
+                // window.onload = function(){
+                //     let oBth = $("#btn");
+                //     oBth.click(function(){
+                //         console.log("输出结果");
+                //     });
+                // }
+                // window.onload = function () {                     
+                //     let oBtn = $("#btn");
+                //     oBtn.click(function toUp(){
+                //         console.log("输出");
+                //     });
+                //  }
+
+                window.onload = function(){
+                    console.log("加载输出");
+                    let OBlock = document.getElementById("block");
+                    // OBlock.onmouseover = toGreen;
+                    // OBlock.onmouseout = toRed;
+                    let OBtn = document.getElementById("btn");
+                    let OUli = document.getElementById("uli");
+
+                    OBtn.onmouseover = function (){
+                        OBtn.style.background = "blue";
+                        if (OUli.style.display == "block"){
+                            OUli.style.display = "none";
+                        }else{
+                            OUli.style.display = "block";
+                        }
+                    }
+
+                }
+
+                function toGreen(){
+                    //改变颜色
+                    let OBlock = document.getElementById("block");
+                    OBlock.style.height = "200px";
+                    OBlock.style.width = "200px";
+                    OBlock.style.background = "green";
+                }
+                function toRed(){
+                    //改变颜色
+                    let OBlock = document.getElementById("block");
+                    OBlock.style.height = "100px";
+                    OBlock.style.width = "100px";
+                    OBlock.style.background = "red";
+                }
+
+                
+        </script>
+	</head>
+	<body>
+        <div id="block" >
+			<p type="button" id= "btn" >点击</p>
+			<ul id="uli" style="display: block;">
+				<li><a href="#">手写</a></li> 
+				<li><a href="#">拼音</a></li>
+				<li><a href="#">关闭</a></li>
+            </ul>
+        </div>    
+            
+		
+	</body>
+</html>
